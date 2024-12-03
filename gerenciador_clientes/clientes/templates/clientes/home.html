@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-4">Bem-vindo ao Gerenciador de Clientes!</h1>
+            <p class="lead">Gerencie e visualize as informações dos seus clientes de forma simples e eficaz.</p>
+        </div>
+    </div>
+
+    <!-- Links Rápidos -->
+    <div class="row mt-4 mb-5">
+        <div class="col-md-4">
+            <a href="{% url 'listar_clientes' %}" class="btn btn-outline-primary btn-lg btn-block">
+                <i class="bi bi-person-lines-fill"></i> Listar Clientes
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'adicionar_cliente' %}" class="btn btn-outline-success btn-lg btn-block">
+                <i class="bi bi-person-plus-fill"></i> Adicionar Cliente
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'editar_cliente' cliente_id=1 %}" class="btn btn-outline-warning btn-lg btn-block">
+                <i class="bi bi-pencil-fill"></i> Editar Cliente
+            </a>
+        </div>
+    </div>
+
+    <!-- Estatísticas do Sistema -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header bg-dark">Clientes Totais</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ total_clientes }}</h5>
+                    <p class="card-text">O total de clientes cadastrados no sistema.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header bg-dark">Clientes Ativos</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ clientes_ativos }}</h5>
+                    <p class="card-text">Clientes atualmente ativos no sistema.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header bg-dark">Novos Clientes (Este Mês)</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ novos_clientes_mes }}</h5>
+                    <p class="card-text">Número de clientes cadastrados este mês.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}

@@ -1,0 +1,74 @@
+/* Estilização global */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #f8f9fa;
+}
+
+/* Containers */
+.container {
+    margin-top: 50px;
+}
+
+/* Cartões */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Tabelas */
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Botões customizados */
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+/* Formulários */
+.form-control {
+    border-radius: 0.375rem;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
